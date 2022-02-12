@@ -1,0 +1,14 @@
+[
+  {
+    "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "username": "ebu",
+        "password": "pbkdf2_sha256$320000$jdBX9ghA6VGgLpYtgOCO07$pmOYSnU9V1v42gE53RLSW91hwctF5xk+OQvOHsEoTWQ=",
+        "email": "",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true
+      }
+  }
+]
