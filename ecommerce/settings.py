@@ -20,9 +20,11 @@ INSTALLED_APPS = [
     "ecommerce.dashboard",
     "ecommerce.inventory",
     "ecommerce.demo",
+    "ecommerce.drf",
     # External applications
     "mptt",
-    "django_elasticsearch_dsl",
+    "rest_framework",
+    # "django_elasticsearch_dsl",
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,7 @@ WSGI_APPLICATION = "ecommerce.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "postgres",
+        "NAME": "ecommercestore",
         "USER": "postgres",
         "PASSWORD": "123",
         "HOST": "127.0.0.1",
@@ -108,8 +110,13 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 10,
+}
 
-ELASTICSEARCH_DSL = {"default": {"hosts": "localhost:9200"}}
+# INTERNAL_IPS = [
+#    "127.0.0.1",
+# ]
+
+# ELASTICSEARCH_DSL = {"default": {"hosts": "localhost:9200"}}
