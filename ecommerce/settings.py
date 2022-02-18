@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     # External applications
     "mptt",
     "rest_framework",
-    # "django_elasticsearch_dsl",
+    "django_elasticsearch_dsl",
 ]
 
 MIDDLEWARE = [
@@ -115,8 +115,8 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 10,
 }
 
-# INTERNAL_IPS = [
-#    "127.0.0.1",
-# ]
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
-# ELASTICSEARCH_DSL = {"default": {"hosts": "localhost:9200"}}
+ELASTICSEARCH_DSL = {"default": {"hosts": "localhost:9200"}}
